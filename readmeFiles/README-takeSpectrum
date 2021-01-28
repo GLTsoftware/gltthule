@@ -1,0 +1,19 @@
+README-takeSpectrum.sh
+
+
+
+When you open the file takeSpectrum.sh with the text tool(ex: vi) at obscon@gltobscon:~/pointing$, you will see the script below.
+
+#!/bin/bash
+ssh root@spec << EOF
+cd /data/glt
+./runsetupglt2.sh 100
+EOF
+
+
+
+The number (here is 100) behind ./runsetupglt2.sh is the integration time (in second) of the spectrum.
+For example, if you want to have a 10s spectrum, the number should be 10.
+
+To record the spectrum, you should type ./takeSpectrum at obscon@gltobscon:~/pointing$. The spectrum will be saved at root@localhost/data/glt with the form of Date_Time.glt.h5. For example, 2018_Feb_19_13_50_00.glt.h5, means that the spectrum was recorded at UT13:50:00 on Feb 19, 2018.
+
